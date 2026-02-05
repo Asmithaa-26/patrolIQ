@@ -1,0 +1,57 @@
+# ===============================
+# Python cache
+# ===============================
+__pycache__/
+*.py[cod]
+
+# ===============================
+# Virtual environments
+# ===============================
+venv/
+.env/
+.venv/
+env/
+
+# ===============================
+# Jupyter Notebook
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# MLflow (IMPORTANT)
+# ===============================
+mlruns/
+patroliq/mlruns/
+patroliq/notebooks/mlruns/
+mlflow.db
+
+# ===============================
+# Trained models (binary files)
+# ===============================
+patroliq/models/*.pkl
+
+# ===============================
+# Raw & processed data
+# ===============================
+patroliq/data/raw/
+patroliq/data/processed/
+
+# ===============================
+# Logs & temp
+# ===============================
+*.log
+*.tmp
+
+# ===============================
+# OS / Editor files
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===============================
+# Secrets
+# ===============================
+*.env
+.env
