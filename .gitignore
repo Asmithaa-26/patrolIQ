@@ -28,7 +28,7 @@ mlflow.db
 # ===============================
 # Trained models (binary files)
 # ===============================
-patroliq/models/*.pkl
+
 
 # ===============================
 # Raw & processed data
