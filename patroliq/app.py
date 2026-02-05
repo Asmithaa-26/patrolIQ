@@ -17,9 +17,16 @@ st.set_page_config(
 # --------------------------------------------------
 # LOAD DATA & MODELS
 # --------------------------------------------------
+from pathlib import Path
+import pandas as pd
+import streamlit as st
+
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\asmis\OneDrive\Desktop\patroliq_V1\patroliq\data\processed\final_data.csv")
+    base_path = Path(__file__).resolve().parent
+    data_path = base_path / "data" / "processed" / "final_data.csv"
+    return pd.read_csv(data_path)
+
 
 @st.cache_resource
 def load_models():
