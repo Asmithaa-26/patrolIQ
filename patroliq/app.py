@@ -21,11 +21,14 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from datasets import load_dataset
+
 @st.cache_data
 def load_data():
-    base_path = Path(__file__).resolve().parent
-    data_path = base_path / "data" / "processed" / "final_data.csv"
-    return pd.read_csv(data_path)
+    dataset = load_dataset("asmithaaa/patrolIq_final")
+    df = dataset["train"].to_pandas()
+    return df
+
 
 
 @st.cache_resource
